@@ -63,37 +63,51 @@
             background: linear-gradient(to right, var(--burgundy), var(--gold));
         }
 
-        /* Exhibit Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
-        }
+        /* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
 
-        .exhibit-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
+/* Exhibit Card Styling */
+.exhibit-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .exhibit-card:hover {
-            transform: translateY(-5px);
-        }
+.exhibit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-        /* Animations */
-        @keyframes balance {
-            0%, 100% { transform: rotate(-15deg); }
-            50% { transform: rotate(15deg); }
-        }
+/* Header & Date Styling */
+.exhibit-header, .exhibit-date {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
 
-        @media (max-width: 768px) {
-            .contract {
-                margin: 20px;
-                padding: 20px;
-            }
-        }
+.exhibit-header {
+  background: var(--burgundy);
+  color: white;
+}
+
+.exhibit-date {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Image Styling */
+.exhibit-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
         .hidden {
   display: none;
@@ -135,14 +149,24 @@
     </section>
 
     <!-- Exhibit Gallery -->
-    <div class="gallery">
-        <div class="exhibit-card">
-            <div class="exhibit-header">Exhibit A</div>
-            <img src="memory1.jpg" alt="Our First Meeting">
-            <div class="exhibit-date">2022</div>
-        </div>
-        <!-- Add more exhibits -->
-    </div>
+<section class="gallery">
+  <div class="exhibit-card">
+    <div class="exhibit-header">Exhibit A</div>
+    <img src="memory1.jpg" alt="Our First Meeting">
+    <div class="exhibit-date">2022</div>
+  </div>
+  <!-- You can add more exhibit cards similarly -->
+  <div class="exhibit-card">
+    <div class="exhibit-header">Exhibit B</div>
+    <img src="memory2.jpg" alt="Our Vacation">
+    <div class="exhibit-date">2023</div>
+  </div>
+  <div class="exhibit-card">
+    <div class="exhibit-header">Exhibit C</div>
+    <img src="memory3.jpg" alt="A Special Day">
+    <div class="exhibit-date">2023</div>
+  </div>
+</section>
 
     <!-- Secret Message -->
     <div class="secret-message">
